@@ -1,0 +1,40 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PUBG Sensitivity Calibrator: Match CS 1.6, CS2 or Call of Duty</title><meta name="description" content="Match your PUBG sensitivity to CS 1.6, CS2 or Call of Duty using measured cm/360, the only reliable way to convert PUBG."><style>*{box-sizing:border-box}html,body{margin:0}
+:root{--bg:#2e3329;--panel:#3d4436;--hi:#4c5544;--line:#6b7560;--ink:#e9e4d0;--muted:#b4b8a2;--amber:#f0b429;--focus:#ffe08a;color-scheme:dark}
+body{background:var(--bg);color:var(--ink);font:16px/1.55 Verdana,Tahoma,"DejaVu Sans",sans-serif;padding:24px 16px 64px}
+main{max-width:760px;margin:0 auto}h1{font-size:1.55rem;line-height:1.25;margin:0 0 8px;color:var(--amber)}
+h2{font-size:1.1rem;margin:34px 0 8px;color:var(--amber)}p{margin:0 0 12px;max-width:68ch}.lead,.note{color:var(--muted)}.note{font-size:.85rem}
+a{color:var(--amber)}nav{font-size:.85rem;margin-bottom:18px}
+.panel{background:var(--panel);border:1px solid var(--line);border-top-color:#8a9580;border-left-color:#8a9580;box-shadow:inset -1px -1px 0 #262a21;padding:16px;margin-top:18px}
+.f{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}label{display:block;font-size:.85rem;color:var(--muted);margin-bottom:4px}
+select,input{width:100%;font:inherit;color:var(--ink);background:#2a2f25;border:1px solid var(--line);padding:9px 10px;border-radius:0}
+select:focus-visible,input:focus-visible,button:focus-visible,a:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+.big{font-size:1.6rem;color:var(--ink);margin:14px 0 2px}.out{color:var(--muted);font-size:.92rem}.out b{color:var(--ink)}
+table{width:100%;border-collapse:collapse;margin-top:10px}th,td{text-align:left;padding:8px;border-bottom:1px solid var(--line)}th{font-weight:normal;color:var(--muted);font-size:.85rem}
+td.n{font-variant-numeric:tabular-nums}.w{overflow-x:auto}ul,ol{padding-left:20px;max-width:68ch}li{margin-bottom:6px}
+button{font:inherit;font-size:.85rem;color:var(--ink);background:var(--hi);border:1px solid var(--line);padding:6px 12px;cursor:pointer;border-radius:0;margin-top:10px}
+.ad{min-height:90px;margin-top:26px}footer{margin-top:40px;font-size:.8rem;color:var(--muted)}</style></head><body><main>
+<nav><a href="index.html">All converters</a></nav>
+<h1>PUBG sensitivity calibrator</h1><p class="lead">Match PUBG to the game you aim best in, using a measured distance instead of an unreliable formula.</p><p>PUBG’s sensitivity slider is not a simple linear scale that sources agree on, and it can also change with field of view and scope. Published yaw values for PUBG disagree with each other, so a formula would give you a wrong number. This page uses a method that works regardless: find the cm/360 you want from another game, then tune PUBG until it matches.</p>
+<h2>Step 1: find your target distance</h2>
+<section class="panel"><div class="f"><div><label for="g">Game you want to match</label><select id="g"><option value="cs16">CS 1.6</option><option value="cs2">CS2</option><option value="cod">Call of Duty (Warzone, BO6, MW3)</option></select></div>
+<div><label for="s1">Sensitivity</label><input id="s1" type="number" step="any" min="0" value="2"></div>
+<div><label for="d1">Mouse DPI</label><input id="d1" type="number" step="50" min="100" value="800"></div></div>
+<p class="big"><span id="t"></span> <span class="out">cm per 360° turn</span></p></section>
+<h2>Step 2: measure PUBG and get your next value</h2>
+<p>In the training ground, use the same mode you play (for example third-person hipfire) and the same DPI. Turn your character one full 360° and measure how far the mouse moved.</p>
+<section class="panel"><div class="f"><div><label for="p1">Current PUBG sensitivity</label><input id="p1" type="number" step="any" min="0" value="50"></div>
+<div><label for="p2">Measured cm/360 in PUBG</label><input id="p2" type="number" step="any" min="0" value="20"></div>
+<div><label for="p3">Target cm/360</label><input id="p3" type="number" step="any" min="0"></div></div>
+<button type="button" id="use">Use the target from Step 1</button>
+<p class="big"><span id="n"></span> <span class="out">try this PUBG sensitivity next</span></p><p class="out" id="e" aria-live="polite"></p></section>
+<h2>Why repeat it</h2><p>The suggestion assumes a straight-line relationship, which PUBG’s slider may not follow exactly. Enter the new value, measure again, and repeat until your measured distance is within about 2% of the target. Two or three rounds usually do it. Measure each scope separately, since they have their own sliders.</p>
+<!-- Ad slot: paste your AdSense unit here once approved --><div class="ad"></div>
+<h2>More converters</h2><p><a href="cs-1-6-to-cs2-sensitivity.html">CS 1.6 to CS2</a> | <a href="cs-1-6-to-call-of-duty-sensitivity.html">CS 1.6 to Call of Duty</a> | <a href="call-of-duty-to-cs-1-6-sensitivity.html">Call of Duty to CS 1.6</a> | <a href="cs2-to-call-of-duty-sensitivity.html">CS2 to Call of Duty</a> | <a href="call-of-duty-to-cs2-sensitivity.html">Call of Duty to CS2</a> | <a href="pubg-sensitivity-calibrator.html">PUBG calibrator</a></p>
+<footer>Based on published yaw values. Not affiliated with Valve, Krafton or Activision. Always test one turn in-game.</footer></main><script>var Y={"cs16":0.022,"cs2":0.022,"cod":0.0066,"val":0.07,"apex":0.022},$=function(i){return document.getElementById(i)};
+function r1(){var a=parseFloat($('s1').value),b=parseFloat($('d1').value),y=Y[$('g').value];$('t').textContent=(a>0&&b>0)?(360/(y*a*b)*2.54).toFixed(1):'-'}
+function r2(){var c=parseFloat($('p1').value),m=parseFloat($('p2').value),t=parseFloat($('p3').value);
+if(!(c>0&&m>0&&t>0)){$('n').textContent='-';$('e').textContent='Fill in all three values.';return}
+$('n').textContent=(c*m/t).toFixed(1);var d=(m-t)/t*100;$('e').textContent=Math.abs(d)<2?'Your PUBG distance is already within 2% of the target.':'Currently '+Math.abs(d).toFixed(0)+'% '+(d>0?'slower':'faster')+' than the target.'}
+['g','s1','d1'].forEach(function(i){$(i).oninput=r1});['p1','p2','p3'].forEach(function(i){$(i).oninput=r2});
+$('use').onclick=function(){$('p3').value=$('t').textContent;r2()};r1();r2();</script></body></html>

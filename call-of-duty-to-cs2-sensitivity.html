@@ -1,0 +1,32 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Call of Duty to CS2 Sensitivity Converter (Same cm/360)</title><meta name="description" content="Convert Call of Duty sensitivity to CS2 with the same cm per 360° turn. Includes a reference table and setup tips."><style>*{box-sizing:border-box}html,body{margin:0}
+:root{--bg:#2e3329;--panel:#3d4436;--hi:#4c5544;--line:#6b7560;--ink:#e9e4d0;--muted:#b4b8a2;--amber:#f0b429;--focus:#ffe08a;color-scheme:dark}
+body{background:var(--bg);color:var(--ink);font:16px/1.55 Verdana,Tahoma,"DejaVu Sans",sans-serif;padding:24px 16px 64px}
+main{max-width:760px;margin:0 auto}h1{font-size:1.55rem;line-height:1.25;margin:0 0 8px;color:var(--amber)}
+h2{font-size:1.1rem;margin:34px 0 8px;color:var(--amber)}p{margin:0 0 12px;max-width:68ch}.lead,.note{color:var(--muted)}.note{font-size:.85rem}
+a{color:var(--amber)}nav{font-size:.85rem;margin-bottom:18px}
+.panel{background:var(--panel);border:1px solid var(--line);border-top-color:#8a9580;border-left-color:#8a9580;box-shadow:inset -1px -1px 0 #262a21;padding:16px;margin-top:18px}
+.f{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}label{display:block;font-size:.85rem;color:var(--muted);margin-bottom:4px}
+select,input{width:100%;font:inherit;color:var(--ink);background:#2a2f25;border:1px solid var(--line);padding:9px 10px;border-radius:0}
+select:focus-visible,input:focus-visible,button:focus-visible,a:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+.big{font-size:1.6rem;color:var(--ink);margin:14px 0 2px}.out{color:var(--muted);font-size:.92rem}.out b{color:var(--ink)}
+table{width:100%;border-collapse:collapse;margin-top:10px}th,td{text-align:left;padding:8px;border-bottom:1px solid var(--line)}th{font-weight:normal;color:var(--muted);font-size:.85rem}
+td.n{font-variant-numeric:tabular-nums}.w{overflow-x:auto}ul,ol{padding-left:20px;max-width:68ch}li{margin-bottom:6px}
+button{font:inherit;font-size:.85rem;color:var(--ink);background:var(--hi);border:1px solid var(--line);padding:6px 12px;cursor:pointer;border-radius:0;margin-top:10px}
+.ad{min-height:90px;margin-top:26px}footer{margin-top:40px;font-size:.8rem;color:var(--muted)}</style></head><body><main>
+<nav><a href="index.html">All converters</a></nav>
+<h1>Call of Duty to CS2 sensitivity converter</h1><p class="lead">Type your Call of Duty sensitivity and get the CS2 value that turns your view the same distance.</p><p>From Call of Duty to CS2, multiply your sensitivity by 0.3. It works from Warzone, Black Ops 6 and Modern Warfare III.</p>
+<section class="panel"><div class="f"><div><label for="s">Call of Duty sensitivity</label><input id="s" type="number" inputmode="decimal" step="any" min="0" value="7"></div>
+<div><label for="d">Mouse DPI (same in both games)</label><input id="d" type="number" inputmode="numeric" step="50" min="100" value="800"></div></div>
+<p class="big"><span id="o"></span> <span class="out">in CS2</span></p><p class="out" id="m" aria-live="polite"></p></section>
+<h2>Quick reference</h2><div class="w"><table><thead><tr><th>Call of Duty</th><th>CS2</th><th>cm/360 at 400 DPI</th><th>at 800 DPI</th><th>at 1600 DPI</th></tr></thead><tbody><tr><td class=n>3</td><td class=n>0.9</td><td class=n>115.5 cm</td><td class=n>57.7 cm</td><td class=n>28.9 cm</td></tr><tr><td class=n>5</td><td class=n>1.5</td><td class=n>69.3 cm</td><td class=n>34.6 cm</td><td class=n>17.3 cm</td></tr><tr><td class=n>6</td><td class=n>1.8</td><td class=n>57.7 cm</td><td class=n>28.9 cm</td><td class=n>14.4 cm</td></tr><tr><td class=n>7</td><td class=n>2.1</td><td class=n>49.5 cm</td><td class=n>24.7 cm</td><td class=n>12.4 cm</td></tr><tr><td class=n>8</td><td class=n>2.4</td><td class=n>43.3 cm</td><td class=n>21.6 cm</td><td class=n>10.8 cm</td></tr><tr><td class=n>10</td><td class=n>3</td><td class=n>34.6 cm</td><td class=n>17.3 cm</td><td class=n>8.7 cm</td></tr></tbody></table></div>
+<p class="note">The conversion multiplies by Call of Duty yaw (0.0066) divided by CS2 yaw (0.022), a factor of 0.3. That keeps the mouse distance for a full turn identical.</p>
+<h2>Before you rely on it</h2><ul><li>A Call of Duty sensitivity of 5 becomes 1.5 in CS2 at the same DPI.</li><li>Aim in CS2 is mostly small flicks and crosshair placement, so many players prefer a slightly lower sensitivity than a Call of Duty match would suggest. Treat the converted value as a starting point.</li><li>Scoped sensitivity in CS2 is controlled by <code>zoom_sensitivity_ratio_mouse</code>, separate from this conversion.</li></ul>
+<h2>How to check it worked</h2><p>Put a mark on your mousepad, turn your character one full 360° in a practice map in each game, and compare the distance. They should match within a few millimetres. If they do not, check that mouse acceleration is off and that DPI is the same.</p>
+<!-- Ad slot: paste your AdSense unit here once approved --><div class="ad"></div>
+<h2>More converters</h2><p><a href="cs-1-6-to-cs2-sensitivity.html">CS 1.6 to CS2</a> | <a href="cs-1-6-to-call-of-duty-sensitivity.html">CS 1.6 to Call of Duty</a> | <a href="call-of-duty-to-cs-1-6-sensitivity.html">Call of Duty to CS 1.6</a> | <a href="cs2-to-call-of-duty-sensitivity.html">CS2 to Call of Duty</a> | <a href="pubg-sensitivity-calibrator.html">PUBG calibrator</a></p>
+<footer>Based on published yaw values. Not affiliated with Valve, Krafton or Activision. Always test one turn in-game.</footer></main><script>var SY=0.0066,TY=0.022,s=document.getElementById('s'),d=document.getElementById('d'),o=document.getElementById('o'),m=document.getElementById('m');
+function f(x){return x.toFixed(3).replace(/\.?0+$/,'')}
+function r(){var a=parseFloat(s.value),b=parseFloat(d.value);if(!(a>0)||!(b>0)){o.textContent='Enter a sensitivity and DPI above zero.';m.textContent='';return}
+o.textContent=f(a*SY/TY);var c=360/(SY*a*b)*2.54;m.innerHTML='Distance for a 360° turn: <b>'+c.toFixed(1)+' cm</b> ('+(c/2.54).toFixed(1)+' in). Your eDPI: <b>'+Math.round(a*b)+'</b>.'}
+s.oninput=d.oninput=r;r();</script></body></html>

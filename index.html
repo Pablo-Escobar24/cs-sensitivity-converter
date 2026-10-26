@@ -1,0 +1,32 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sensitivity Converter: CS 1.6, CS2, Call of Duty, PUBG</title><meta name="description" content="Convert mouse sensitivity between CS 1.6, CS2, Call of Duty and Valorant with the same cm/360. PUBG calibrator included."><style>*{box-sizing:border-box}html,body{margin:0}
+:root{--bg:#2e3329;--panel:#3d4436;--hi:#4c5544;--line:#6b7560;--ink:#e9e4d0;--muted:#b4b8a2;--amber:#f0b429;--focus:#ffe08a;color-scheme:dark}
+body{background:var(--bg);color:var(--ink);font:16px/1.55 Verdana,Tahoma,"DejaVu Sans",sans-serif;padding:24px 16px 64px}
+main{max-width:760px;margin:0 auto}h1{font-size:1.55rem;line-height:1.25;margin:0 0 8px;color:var(--amber)}
+h2{font-size:1.1rem;margin:34px 0 8px;color:var(--amber)}p{margin:0 0 12px;max-width:68ch}.lead,.note{color:var(--muted)}.note{font-size:.85rem}
+a{color:var(--amber)}nav{font-size:.85rem;margin-bottom:18px}
+.panel{background:var(--panel);border:1px solid var(--line);border-top-color:#8a9580;border-left-color:#8a9580;box-shadow:inset -1px -1px 0 #262a21;padding:16px;margin-top:18px}
+.f{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}label{display:block;font-size:.85rem;color:var(--muted);margin-bottom:4px}
+select,input{width:100%;font:inherit;color:var(--ink);background:#2a2f25;border:1px solid var(--line);padding:9px 10px;border-radius:0}
+select:focus-visible,input:focus-visible,button:focus-visible,a:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+.big{font-size:1.6rem;color:var(--ink);margin:14px 0 2px}.out{color:var(--muted);font-size:.92rem}.out b{color:var(--ink)}
+table{width:100%;border-collapse:collapse;margin-top:10px}th,td{text-align:left;padding:8px;border-bottom:1px solid var(--line)}th{font-weight:normal;color:var(--muted);font-size:.85rem}
+td.n{font-variant-numeric:tabular-nums}.w{overflow-x:auto}ul,ol{padding-left:20px;max-width:68ch}li{margin-bottom:6px}
+button{font:inherit;font-size:.85rem;color:var(--ink);background:var(--hi);border:1px solid var(--line);padding:6px 12px;cursor:pointer;border-radius:0;margin-top:10px}
+.ad{min-height:90px;margin-top:26px}footer{margin-top:40px;font-size:.8rem;color:var(--muted)}</style></head><body><main>
+<nav><a href="index.html">All converters</a></nav>
+<h1>Sensitivity converter for CS 1.6, CS2 and Call of Duty</h1><p class="lead">Enter your settings and get matching sensitivities in other games. Each result turns your view the same distance per mouse movement.</p><section class="panel"><div class="f"><div><label for="g">Game you play now</label><select id="g"><option value="cs16">CS 1.6</option><option value="cs2">CS2</option><option value="cod">Call of Duty (Warzone, BO6, MW3)</option><option value="val">Valorant</option><option value="apex">Apex Legends</option></select></div>
+<div><label for="s">Sensitivity</label><input id="s" type="number" step="any" min="0" value="2"></div>
+<div><label for="d">Mouse DPI</label><input id="d" type="number" step="50" min="100" value="800"></div></div>
+<p class="out" id="m" aria-live="polite"></p><div class="w"><table><thead><tr><th>Game</th><th>Sensitivity</th><th>eDPI</th></tr></thead><tbody id="b"></tbody></table></div></section>
+<p class="note">PUBG is not in this table because its slider has no verified conversion formula. Use the <a href="pubg-sensitivity-calibrator.html">PUBG calibrator</a> to match it by measurement.</p>
+<h2>Game-specific pages</h2><p><a href="cs-1-6-to-cs2-sensitivity.html">CS 1.6 to CS2</a> | <a href="cs-1-6-to-call-of-duty-sensitivity.html">CS 1.6 to Call of Duty</a> | <a href="call-of-duty-to-cs-1-6-sensitivity.html">Call of Duty to CS 1.6</a> | <a href="cs2-to-call-of-duty-sensitivity.html">CS2 to Call of Duty</a> | <a href="call-of-duty-to-cs2-sensitivity.html">Call of Duty to CS2</a> | <a href="pubg-sensitivity-calibrator.html">PUBG calibrator</a></p>
+<!-- Ad slot: paste your AdSense unit here once approved --><div class="ad"></div>
+<h2>More converters</h2><p><a href="cs-1-6-to-cs2-sensitivity.html">CS 1.6 to CS2</a> | <a href="cs-1-6-to-call-of-duty-sensitivity.html">CS 1.6 to Call of Duty</a> | <a href="call-of-duty-to-cs-1-6-sensitivity.html">Call of Duty to CS 1.6</a> | <a href="cs2-to-call-of-duty-sensitivity.html">CS2 to Call of Duty</a> | <a href="call-of-duty-to-cs2-sensitivity.html">Call of Duty to CS2</a> | <a href="pubg-sensitivity-calibrator.html">PUBG calibrator</a></p>
+<footer>Based on published yaw values. Not affiliated with Valve, Krafton or Activision. Always test one turn in-game.</footer></main><script>var G={"cs16":[0.022,"CS 1.6"],"cs2":[0.022,"CS2"],"cod":[0.0066,"Call of Duty (Warzone, BO6, MW3)"],"val":[0.07,"Valorant"],"apex":[0.022,"Apex Legends"]},$=function(i){return document.getElementById(i)};
+function f(x){return x.toFixed(3).replace(/\.?0+$/,'')}
+function r(){var s=parseFloat($('s').value),d=parseFloat($('d').value),y=G[$('g').value][0],b=$('b');b.innerHTML='';
+if(!(s>0&&d>0)){$('m').textContent='Enter a sensitivity and DPI above zero.';return}
+var c=360/(y*s*d)*2.54;$('m').innerHTML='Distance for a 360° turn: <b>'+c.toFixed(1)+' cm</b>';
+for(var k in G){var v=s*y/G[k][0],t=document.createElement('tr');t.innerHTML='<td>'+G[k][1]+'</td><td class=n>'+f(v)+'</td><td class=n>'+Math.round(v*d)+'</td>';b.appendChild(t)}}
+['g','s','d'].forEach(function(i){$(i).oninput=r});r();</script></body></html>
