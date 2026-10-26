@@ -2,7 +2,7 @@
 
 Free mouse sensitivity converter for **CS 1.6, CS2 and Call of Duty** (Warzone, Black Ops 6, Modern Warfare III). Get the same cm/360 and the same muscle memory in every game, with eDPI and DPI math, plus a **PUBG calibrator**. It runs in your browser with no install.
 
-**Live site:** https://YOUR-SITE-ADDRESS (replace this after you deploy)
+**Live site:** https://cs-sensitivity-converter.trendhunt91.workers.dev/
 
 ## What it does
 
